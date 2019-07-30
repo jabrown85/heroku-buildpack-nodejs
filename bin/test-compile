@@ -8,7 +8,7 @@ set -o pipefail   # don't ignore exit codes when piping output
 
 ### Configure directories
 
-#BP_DIR=$(cd "$(dirname "${0:-}")" || exit; cd ..; pwd)
+BP_DIR=$(cd "$(dirname "${0:-}")" || exit; cd ..; pwd)
 
 ### Load dependencies
 # shellcheck source=lib/environment.sh
