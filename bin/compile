@@ -158,9 +158,7 @@ install_bins() {
 
   warn_node_engine "$node_engine"
   install_nodejs "$node_engine" "$BUILD_DIR/.heroku/node"
-  echo "here!"
-  monitor "install-npm-binary" install_npm "$npm_engine" "$BUILD_DIR/.heroku/node" $NPM_LOCK
-  echo "here!"
+  install_npm "$npm_engine" "$BUILD_DIR/.heroku/node" $NPM_LOCK
   node_version="$(node --version)"
   mcount "version.node.$node_version"
   meta_set "node-version" "$node_version"
