@@ -54,7 +54,6 @@ monitor() {
   start=$(nowms)
 
   # execute the subcommand and save the peak memory usage
-  "${@:-}"
   "${command[@]}"
 
   mtime "exec.$command_name.time" "${start}"
