@@ -112,7 +112,7 @@ save_default_cache_directories() {
 
   if [[ $(features_get "cache-native-yarn-cache") == "true" ]] && [[ "$YARN" == "true" ]]; then
     if [[ -d "$yarn_cache_dir" ]]; then
-      mv "$yarn_cache_dir" "$cache_dir/node/cache/yarn" 
+      cp -r "$yarn_cache_dir" "$cache_dir/node/cache/yarn"
       echo "- yarn cache"
     fi
   else
