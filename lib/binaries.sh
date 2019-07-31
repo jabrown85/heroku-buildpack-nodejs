@@ -96,7 +96,7 @@ install_npm() {
   local version="$1"
   local dir="$2"
   local npm_lock="$3"
-  npm_version="$(npm --version)"
+  npm_version="$(npm --version --no-update-notifier)"
 
   # If the user has not specified a version of npm, but has an npm lockfile
   # upgrade them to npm 5.x if a suitable version was not installed with Node
